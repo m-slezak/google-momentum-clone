@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const url =
-  "https://api.openweathermap.org/data/2.5/weather?q=Warsaw&appid=51a63434bef5e5bc4aaaaa394f7c0090";
+  "https://api.openweathermap.org/data/2.5/weather?q=Warsaw&units=metric&appid=51a63434bef5e5bc4aaaaa394f7c0090";
 
 const Weather = () => {
   const [data, setData] = useState(null);
@@ -24,7 +24,7 @@ const Weather = () => {
   return (
     <div>
       <p>{data.main.name}</p>
-      <p>{data.main.temp}</p>
+      <p>{data.main.temp.toFixed(0)}°C</p>
     </div>
   );
 };
