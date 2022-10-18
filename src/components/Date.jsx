@@ -5,7 +5,7 @@ import "moment-timezone";
 const Date = () => {
   return (
     <div>
-      <p>
+      <p className="lg:text-2xl md:text-xl px-4">
         <Moment format="YYYY/MM/DD"></Moment>
       </p>
     </div>

@@ -7,11 +7,11 @@ const Time = () => {
 
   const greeting = () => {
     if (date.getHours() >= 5 && date.getHours() < 11) {
-      return "Good Morning, Michał";
+      return "Good Morning, Michał.";
     } else if (date.getHours() >= 11 && date.getHours() < 17) {
-      return "Good Afternoon, Michał";
+      return "Good Afternoon, Michał.";
     } else if (date.getHours() >= 17 && date.getHours() < 24) {
-      return "Good Evening, Michał";
+      return "Good Evening, Michał.";
     } else {
       return "What are you doing up at this hour?";
     }
@@ -19,10 +19,10 @@ const Time = () => {
 
   return (
     <div>
-      <p>
+      <p className="lg:text-9xl tracking-tighter py-4 font-bold md:text-5xl sm:text-3xl">
         <Moment format="LT"></Moment>
       </p>
-      <p>{greeting()}</p>
+      <p className="lg:text-6xl md:text-3xl sm:text-xl ">{greeting()}</p>
     </div>
   );
 };

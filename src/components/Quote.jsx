@@ -19,9 +19,13 @@ const Quote = () => {
 
   console.log(data);
   return (
-    <div>
-      <p>{data.quotes[0].text}</p>
-      <p>{data.quotes[0].author}</p>
+    <div className="p-10 m-auto text-center mx-20">
+      <p className=" lg:text-xl md:text-base sm:text-sm ">
+        "{data.quotes[0].text}"
+      </p>
+      <p className="lg:text-xl py-4 md:text-base sm:text-sm">
+        - {data.quotes[0].author}
+      </p>
     </div>
   );
 };
